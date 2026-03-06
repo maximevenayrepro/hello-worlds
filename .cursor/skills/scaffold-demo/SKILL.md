@@ -8,7 +8,7 @@ description: Scaffold a new hello-world demo with standard structure. Use when c
 ## Workflow
 
 1. **Determine the demo name** following `naming-conventions` rule: `{language}-{framework}` in kebab-case
-2. **Create the folder** at the project root
+2. **Create the folder** inside `demos/` at the project root
 3. **Generate all required files** per `demo-structure` rule:
    - `README.md` following `readme-standards` rule
    - Standard entrypoint for the language (`main.py`, `index.ts`, `main.rs`...)

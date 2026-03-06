@@ -61,7 +61,7 @@ def validate(demo_path: Path) -> list[str]:
     if not has_test:
         errors.append("No test file found")
 
-    root_readme = demo_path.parent / "README.md"
+    root_readme = Path("README.md")
     if root_readme.exists():
         content = root_readme.read_text(encoding="utf-8")
         if name not in content:

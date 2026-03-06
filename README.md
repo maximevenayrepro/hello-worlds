@@ -10,10 +10,10 @@ A collection of minimal, self-contained demos across various languages and frame
 
 ## Structure
 
-Each demo lives in its own folder following a consistent layout:
+Each demo lives in its own folder inside `demos/`, following a consistent layout:
 
 ```
-{language-framework}/
+demos/{language-framework}/
 ├── README.md          # What it does, how to run it
 ├── Dockerfile         # Run it anywhere
 ├── {entrypoint}       # main.py, index.ts, main.rs…
@@ -60,5 +60,5 @@ Specialized agents that can be delegated tasks or invoked with `/name`:
 
 | Language | Framework | Description |
 |----------|-----------|-------------|
-| [Python](python/) | — | Minimal HTTP server using the standard library |
-| [JavaScript](javascript-node/) | Node.js | Minimal HTTP server using the standard library |
+| [Python](demos/python/) | — | Minimal HTTP server using the standard library |
+| [JavaScript](demos/javascript-node/) | Node.js | Minimal HTTP server using the standard library |

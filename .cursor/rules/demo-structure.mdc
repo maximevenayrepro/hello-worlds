@@ -5,10 +5,10 @@ alwaysApply: true
 
 # Demo Structure
 
-Each demo is a self-contained folder with:
+Each demo is a self-contained folder inside `demos/`:
 
 ```
-{demo-name}/
+demos/{demo-name}/
 ├── README.md              # Required
 ├── Dockerfile             # Required
 ├── {standard entrypoint}  # main.py, index.ts, main.rs, etc.

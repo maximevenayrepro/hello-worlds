@@ -33,7 +33,7 @@ isProject: false
 
 ## Common concept
 
-Every demo reproduces the exact same pattern as `[python/](python/)`:
+Every demo reproduces the exact same pattern as `[python/](demos/python/)`:
 
 - A `hello()` function returning `"Hello, World!"`
 - An HTTP server on port **8000** serving `{"message": "Hello, World!"}` as JSON on `GET /`

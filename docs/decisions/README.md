@@ -14,3 +14,4 @@ Each file follows the pattern `{number}-{title}.md` with sections:
 | # | Title | Date |
 |---|-------|------|
 | 001 | [Project Setup](001-project-setup.md) | 2026-03-06 |
+| 002 | [Demos Folder](002-demos-folder.md) | 2026-03-07 |
