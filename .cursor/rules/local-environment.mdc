@@ -1,0 +1,31 @@
+---
+description: Local environment — what runtimes are available and how to run demos
+alwaysApply: true
+---
+
+# Local Environment
+
+## Installed locally
+
+- Python
+- Docker
+
+## NOT installed locally
+
+- Node.js
+- Go, Java, Rust, C#, GCC…
+
+## Running demos and tests
+
+- If the language runtime is installed locally, run commands directly
+- Otherwise, use Docker:
+
+```powershell
+docker run --rm -v "${PWD}:/app" -w /app <image> <command>
+```
+
+Example for Node.js tests:
+
+```powershell
+docker run --rm -v "${PWD}:/app" -w /app node:22-slim node --test index.test.js
+```
