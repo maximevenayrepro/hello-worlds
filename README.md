@@ -61,3 +61,4 @@ Specialized agents that can be delegated tasks or invoked with `/name`:
 | Language | Framework | Description |
 |----------|-----------|-------------|
 | [Python](python/) | — | Minimal HTTP server using the standard library |
+| [JavaScript](javascript-node/) | Node.js | Minimal HTTP server using the standard library |
