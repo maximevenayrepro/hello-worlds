@@ -16,7 +16,7 @@ description: Validate that a demo folder respects all project rules. Use when ve
 ## What is checked
 
 - Folder name matches `naming-conventions` (kebab-case, `{lang}-{framework}` pattern)
-- `README.md` exists and has required sections (Title, Description, Prerequisites, Run)
+- `README.md` exists and has required sections (Title, Description, Prerequisites, Installation, Run)
 - Standard entrypoint file exists
 - `Dockerfile` exists
 - At least one test file exists

@@ -31,18 +31,30 @@ Short, always-on constraints injected into every conversation: naming convention
 
 ### Skills (`.cursor/skills/`)
 
-Multi-step workflows the AI follows on demand. Invoked with `/skill-name` in chat:
+Multi-step workflows the AI follows on demand:
 
-| Skill | Trigger | Purpose |
-|-------|---------|---------|
-| `scaffold-demo` | `/scaffold-demo` | Generate a new demo with all required files |
-| `validate-demo` | `/validate-demo` | Check a demo folder against every project rule |
-| `git-commit` | `/git-commit` | Analyze changes and create a conventional commit |
-| `docker-run` | `/docker-run` | Build and run a demo's Docker container |
+| Skill | Purpose |
+|-------|---------|
+| `scaffold-demo` | Generate a new demo with all required files |
+| `validate-demo` | Check a demo folder against every project rule |
+| `git-commit` | Analyze changes and create a conventional commit |
+| `docker-run` | Build and run a demo's Docker container |
 
-### Why no Commands (`.cursor/commands/`)?
+### Subagents (`.cursor/agents/`)
 
-Commands are the older slash-shortcut mechanism in Cursor — simple markdown prompts in `.cursor/commands/` triggered by `/`. Since Cursor 2.4+, **Skills supersede Commands**: they live in `.cursor/skills/`, support richer multi-step workflows, and are invoked with the same `/` syntax. There is no reason to maintain both, so this project uses Skills exclusively.
+Specialized agents that can be delegated tasks or invoked with `/name`:
+
+| Subagent | Mode | Purpose |
+|----------|:----:|---------|
+| `tester` | readonly | Run validate + tests + Docker + browser on a demo |
+| `verifier` | readonly | Confirm that completed work is actually functional |
+| `debugger` | read/write | Diagnose errors and propose fixes |
+| `researcher` | readonly | Search online for up-to-date docs and best practices |
+
+### Documentation
+
+- **ADRs** (`docs/decisions/`) — Architectural decisions with context, rationale, and alternatives
+- **Plans** (`.cursor/plans/`) — Implementation plans for complex tasks
 
 ## Demos
 

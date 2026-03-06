@@ -29,11 +29,16 @@ New repository for simple demos in various languages and frameworks. Goal: learn
 - Flexible commit granularity
 
 ### Cursor configuration
-- 8 rules in `.cursor/rules/`: naming, structure, readme, code-style, git, workflow, scope, shell
+- 9 rules in `.cursor/rules/`: naming, structure, readme, code-style, git, workflow, scope, shell, web-search
 - 4 skills in `.cursor/skills/`: scaffold-demo, validate-demo, docker-run, git-commit
+- 4 subagents in `.cursor/agents/`: tester (readonly), verifier (readonly), debugger, researcher (readonly)
 - Shell rule enforces PowerShell-compatible syntax (Windows environment)
-- Workflow rule: ask before (if ambiguous), always review after, re-review after corrections
+- Workflow rule: ask before (if ambiguous), always review after, re-review after corrections, update docs, create ADR when needed
 - Scope rule: do only what is explicitly asked
+
+### Knowledge management
+- ADRs in `docs/decisions/` for architectural decisions
+- Plans in `.cursor/plans/` for complex task planning
 
 ## Alternatives considered
 

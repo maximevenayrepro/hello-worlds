@@ -1,0 +1,16 @@
+---
+description: Use web search proactively to get up-to-date information
+alwaysApply: true
+---
+
+# Web Search
+
+Search the web **whenever it is necessary or useful**, including but not limited to:
+
+- Up-to-date documentation for a framework, library, or tool
+- Current best practices or idiomatic patterns
+- Debugging leads (error messages, known issues, changelogs)
+- Version-specific APIs or breaking changes
+- Comparison of tools or approaches with recent data
+
+Do not rely solely on training data when fresher information may exist online.

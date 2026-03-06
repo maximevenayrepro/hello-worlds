@@ -7,16 +7,18 @@ alwaysApply: true
 
 ## Before implementing
 
-1. If any decision has multiple valid options, ask arbitrage questions first
-2. If everything is obvious and unambiguous, proceed directly — no need to ask
-3. When questions were asked, summarize choices and get confirmation before writing
+1. For complex or multi-step tasks, use `.cursor/plans/` to draft a plan before coding
+2. If any decision has multiple valid options, ask arbitrage questions first
+3. If everything is obvious and unambiguous, proceed directly — no need to ask
+4. When questions were asked, summarize choices and get confirmation before writing
 
 ## After implementing
 
 1. Always re-read what was created
 2. Update any documentation impacted by the changes (READMEs, ADR index, demo table...) — only what is affected, nothing extra
-3. Verify all project rules have been respected (structure, naming, style, etc.)
-4. Present review findings: what's good, what's potentially wrong or inconsistent
-5. If issues are found, propose fixes and ask for the user's decision
-6. **If corrections were applied, re-read and review again** — repeat until no more issues are found
-7. Only move on when the user confirms the result is satisfactory
+3. If a significant architectural or convention decision was made, create an ADR in `docs/decisions/` and update the index
+4. Verify all project rules have been respected (structure, naming, style, etc.)
+5. Present review findings: what's good, what's potentially wrong or inconsistent
+6. If issues are found, propose fixes and ask for the user's decision
+7. **If corrections were applied, re-read and review again** — repeat until no more issues are found
+8. Only move on when the user confirms the result is satisfactory
