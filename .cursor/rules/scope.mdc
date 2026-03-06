@@ -1,0 +1,11 @@
+---
+description: Stay strictly within the scope of the user's request
+alwaysApply: true
+---
+
+# Scope
+
+- Do only what the user explicitly asks — nothing more
+- Do not anticipate next steps or execute follow-up actions
+- Do not run commands or create files beyond what was requested
+- When done, stop. Do not suggest or start the next task

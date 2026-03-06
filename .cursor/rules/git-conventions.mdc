@@ -1,0 +1,22 @@
+---
+description: Git commit message format and workflow
+alwaysApply: true
+---
+
+# Git Conventions
+
+## Commit messages
+
+Use **Conventional Commits** format:
+
+```
+feat: add python-fastapi demo
+fix: correct Dockerfile for rust-axum
+docs: update root README with new demo list
+test: add endpoint test for typescript-bun
+chore: add .gitignore
+```
+
+## Granularity
+
+Flexible — use your judgment. One commit per demo is fine, splitting structure/code/tests is also fine.

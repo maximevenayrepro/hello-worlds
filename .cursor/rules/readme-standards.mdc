@@ -1,0 +1,41 @@
+---
+description: README format and required sections for demo folders
+globs: "*/**/README.md"
+alwaysApply: false
+---
+
+# README Standards
+
+Every demo README.md must be written in **English** and contain these sections in order:
+
+## Required Sections
+
+1. **Title** — `# {Language} - {Framework}` or `# {Language}`
+2. **Description** — One or two sentences: what the demo does and which concept it demonstrates
+3. **Prerequisites** — Language version, tools, runtime needed
+4. **Installation** — Commands to install dependencies (omit if none)
+5. **Run** — Exact command(s) to execute the demo
+
+## Example
+
+```markdown
+# Python - FastAPI
+
+A minimal REST API using FastAPI.
+
+## Prerequisites
+
+- Python 3.12+
+
+## Installation
+
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+## Run
+
+\`\`\`bash
+uvicorn main:app --reload
+\`\`\`
+```

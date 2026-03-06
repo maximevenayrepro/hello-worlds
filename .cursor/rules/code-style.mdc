@@ -1,0 +1,11 @@
+---
+description: Code style principles across all demos
+alwaysApply: true
+---
+
+# Code Style
+
+- Keep code as **simple as possible** — strict minimum to demonstrate the concept
+- Comments in **English**, only when the intent is non-obvious
+- Follow the idiomatic style of each language/framework
+- No boilerplate beyond what the demo requires

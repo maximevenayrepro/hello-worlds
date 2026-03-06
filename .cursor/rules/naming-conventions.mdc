@@ -1,0 +1,20 @@
+---
+description: Naming conventions for demo folders
+alwaysApply: true
+---
+
+# Naming Conventions
+
+## Folder names
+
+- Format: `{language}-{framework}` in kebab-case
+- Without framework: `{language}` only (e.g. `rust`, `go`)
+- Variants: add a descriptive suffix (e.g. `python-fastapi-crud`, `python-fastapi-auth`)
+
+## Examples
+
+- `go`
+- `python-fastapi`
+- `typescript-bun`
+- `rust-axum`
+- `python-fastapi-websocket`

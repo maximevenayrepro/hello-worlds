@@ -1,0 +1,21 @@
+---
+description: Agent interaction workflow — ask before, review after
+alwaysApply: true
+---
+
+# Workflow
+
+## Before implementing
+
+1. If any decision has multiple valid options, ask arbitrage questions first
+2. If everything is obvious and unambiguous, proceed directly — no need to ask
+3. When questions were asked, summarize choices and get confirmation before writing
+
+## After implementing
+
+1. Always re-read what was created
+2. Verify all project rules have been respected (structure, naming, style, etc.)
+3. Present review findings: what's good, what's potentially wrong or inconsistent
+4. If issues are found, propose fixes and ask for the user's decision
+5. **If corrections were applied, re-read and review again** — repeat until no more issues are found
+6. Only move on when the user confirms the result is satisfactory

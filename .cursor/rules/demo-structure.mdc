@@ -1,0 +1,24 @@
+---
+description: Standard structure for each demo folder
+alwaysApply: true
+---
+
+# Demo Structure
+
+Each demo is a self-contained folder with:
+
+```
+{demo-name}/
+├── README.md              # Required
+├── Dockerfile             # Required
+├── {standard entrypoint}  # main.py, index.ts, main.rs, etc.
+├── {deps file}            # Only if the demo has dependencies
+└── {test file}            # At least one minimal test
+```
+
+## Requirements
+
+- Entry point follows the language/framework standard naming (`main.py`, `index.ts`, `main.rs`, `Main.java`...)
+- Dependency file only when needed (`requirements.txt`, `package.json`, `Cargo.toml`...)
+- Every demo must include at least one test
+- Every demo must include a Dockerfile to run in a container
