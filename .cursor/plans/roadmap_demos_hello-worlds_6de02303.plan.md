@@ -2,9 +2,12 @@
 name: roadmap demos hello-worlds
 overview: "Roadmap of hello-world demos to add to the project, ordered by increasing difficulty. Each demo reproduces the same concept as the existing Python demo: minimal HTTP server returning JSON on `/`, 404 otherwise, with tests and Dockerfile."
 todos:
+  - id: demo-python
+    content: "python: Python stdlib HTTP server"
+    status: completed
   - id: demo-javascript-node
     content: "javascript-node: Node.js stdlib HTTP server"
-    status: pending
+    status: completed
   - id: demo-go
     content: "go: Go stdlib HTTP server"
     status: pending
@@ -43,7 +46,16 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 
 ## Order by increasing difficulty
 
-### 1. `javascript-node` — Node.js (stdlib)
+### 1. `python` — Python (stdlib)
+
+- **Difficulty**: trivial
+- **Why**: `http.server` + `json` in stdlib, built-in tooling (`unittest`)
+- **Entrypoint**: `main.py`
+- **Tests**: `unittest` (stdlib)
+- **Deps**: none
+- **Docker image**: `python:3.12-slim`
+
+### 2. `javascript-node` — Node.js (stdlib)
 
 - **Difficulty**: trivial
 - **Why**: the `http` module is built-in, JSON is native to the language
@@ -52,7 +64,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: none
 - **Docker image**: `node:22-slim`
 
-### 2. `go` — Go (stdlib)
+### 3. `go` — Go (stdlib)
 
 - **Difficulty**: easy
 - **Why**: `net/http` + `encoding/json` in stdlib, built-in tooling (`go test`)
@@ -61,7 +73,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: `go.mod` (no external dependency)
 - **Docker image**: multi-stage with `golang:1.23` then `gcr.io/distroless/static-debian12`
 
-### 3. `java` — Java (JDK)
+### 4. `java` — Java (JDK)
 
 - **Difficulty**: moderate
 - **Why**: `com.sun.net.httpserver.HttpServer` is in the JDK but the API is verbose; no built-in test framework, JUnit needed
@@ -70,7 +82,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: JUnit 5 jars (downloaded in Dockerfile, no Maven/Gradle to stay minimal)
 - **Docker image**: `eclipse-temurin:21-jdk-jammy`
 
-### 4. `csharp` — C# (.NET)
+### 5. `csharp` — C# (.NET)
 
 - **Difficulty**: moderate
 - **Why**: .NET minimal API is very concise, but the .NET ecosystem (csproj, restore, build) adds structural complexity
@@ -79,7 +91,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: `.csproj` (.NET framework, no external NuGet for the server)
 - **Docker image**: multi-stage `mcr.microsoft.com/dotnet/sdk:9.0` then `mcr.microsoft.com/dotnet/aspnet:9.0`
 
-### 5. `rust` — Rust (stdlib)
+### 6. `rust` — Rust (stdlib)
 
 - **Difficulty**: high
 - **Why**: no HTTP server in stdlib; requires `std::net::TcpListener` and manual HTTP parsing/writing
@@ -88,7 +100,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: `Cargo.toml` (no external dependency, HTTP done by hand)
 - **Docker image**: multi-stage `rust:1.84-slim` then `debian:bookworm-slim`
 
-### 6. `cpp` — C++ (sockets)
+### 7. `cpp` — C++ (sockets)
 
 - **Difficulty**: high
 - **Why**: no HTTP or JSON in stdlib; POSIX sockets + manual HTTP parsing + manual JSON construction
@@ -97,7 +109,7 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 - **Deps**: none (POSIX sockets)
 - **Docker image**: multi-stage `gcc:14` then `debian:bookworm-slim`
 
-### 7. `c` — C (sockets)
+### 8. `c` — C (sockets)
 
 - **Difficulty**: maximum
 - **Why**: same constraints as C++ but without classes, strings, or RAII — everything is manual memory and buffer management
@@ -113,13 +125,14 @@ Every demo reproduces the exact same pattern as `[python/](python/)`:
 
 | #   | Folder            | Language | Approach             | Difficulty |
 | --- | ----------------- | -------- | -------------------- | ---------- |
-| 1   | `javascript-node` | Node.js  | stdlib `http`        | trivial    |
-| 2   | `go`              | Go       | stdlib `net/http`    | easy       |
-| 3   | `java`            | Java     | JDK `HttpServer`     | moderate   |
-| 4   | `csharp`          | C# .NET  | minimal API          | moderate   |
-| 5   | `rust`            | Rust     | stdlib `TcpListener` | high       |
-| 6   | `cpp`             | C++      | POSIX sockets        | high       |
-| 7   | `c`               | C        | POSIX sockets        | maximum    |
+| 1   | `python`          | Python   | stdlib `http.server` | trivial    |
+| 2   | `javascript-node` | Node.js  | stdlib `http`        | trivial    |
+| 3   | `go`              | Go       | stdlib `net/http`    | easy       |
+| 4   | `java`            | Java     | JDK `HttpServer`     | moderate   |
+| 5   | `csharp`          | C# .NET  | minimal API          | moderate   |
+| 6   | `rust`            | Rust     | stdlib `TcpListener` | high       |
+| 7   | `cpp`             | C++      | POSIX sockets        | high       |
+| 8   | `c`               | C        | POSIX sockets        | maximum    |
 
 
 ---
