@@ -15,6 +15,7 @@ description: Analyze changes and create a git commit with a conventional commit 
    - No scope for cross-cutting changes (e.g. `chore: add .gitignore`)
 4. **Present the message** and wait for user approval
 5. **Commit** only after explicit confirmation
+6. **Ask if the user wants to push** to the remote
 
 ## Message guidelines
 
