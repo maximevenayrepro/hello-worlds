@@ -1,0 +1,9 @@
+---
+description: All project files must be written in English
+alwaysApply: true
+---
+
+# Language
+
+- All file contents must be written in **English**: code, comments, documentation, plans, ADRs, READMEs, commit messages
+- This applies regardless of the language used in conversation
