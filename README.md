@@ -60,4 +60,4 @@ Specialized agents that can be delegated tasks or invoked with `/name`:
 
 | Language | Framework | Description |
 |----------|-----------|-------------|
-| — | — | *Coming soon* |
+| [Python](python/) | — | Minimal HTTP server using the standard library |
